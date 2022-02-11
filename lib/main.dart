@@ -68,14 +68,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                              Container(
                                margin: const EdgeInsets.only(bottom: 4.0),
-                               color: const Color(0xfff2f2f2),
-                              //  height: 100.0,
+                               color: const Color(0xfff2f2f2),                         
                                child: Row(
                                  mainAxisAlignment: MainAxisAlignment.center,
                                  children:  [
-                                  Image.network(image, width: 150,)
+                                  FadeInImage(
+                                    placeholder: const AssetImage('assets/img/loading.gif'), 
+                                    image: NetworkImage(image),
+                                    width: 150,
+                                  )
                                  ],
                                ),
+                            
                              ),
                              Padding(
                                padding: const EdgeInsets.only(left: 5.0, bottom:4.0),
@@ -129,13 +133,17 @@ class _MyHomePageState extends State<MyHomePage> {
                              Container(
                                margin: const EdgeInsets.only(bottom: 4.0),
                                color: const Color(0xfff2f2f2),
-                              //  height: 100.0,
                                child: Row(
                                  mainAxisAlignment: MainAxisAlignment.center,
                                  children:  [
-                                  Image.network(image2, width: 150,)
+                                  FadeInImage(
+                                    placeholder: const AssetImage('assets/img/loading.gif'), 
+                                    image: NetworkImage(image2),
+                                    width: 150,
+                                  )
                                  ],
                                ),
+                           
                              ),
                              Padding(
                                padding: const EdgeInsets.only(left: 5.0, bottom:4.0),
